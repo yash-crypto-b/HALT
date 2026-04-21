@@ -3,6 +3,9 @@ import express from "express";
 import cors from "cors";                          // ✅ keep only this one
 import supabase from "./Config/supabaseClient.js";
 import { requireAuth } from "./middleware/auth.js";
+process.on('uncaughtException', (err) => {
+  console.error('UNCAUGHT EXCEPTION:', err);
+});
 // ❌ removed: const cors = require('cors');
 
 dotenv.config();

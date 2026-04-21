@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  * {
+    @apply border-halt-border;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-halt-dark text-white antialiased;
+    font-family: 'Inter', sans-serif;
+    background-image:
+      radial-gradient(circle at top left, rgba(230, 57, 70, 0.12), transparent 30%),
+      radial-gradient(circle at bottom right, rgba(255, 255, 255, 0.04), transparent 25%);
+  }
+
+  #root {
+    @apply min-h-screen;
+  }
+}
+
+@layer components {
+  .halt-label {
+    @apply text-[10px] font-semibold uppercase tracking-[0.38em] text-zinc-500 md:text-xs;
+  }
+
+  .halt-card {
+    @apply rounded-3xl border border-halt-border bg-halt-card;
+  }
+
+  .halt-panel {
+    @apply halt-card p-6 md:p-7;
+  }
+
+  .halt-button {
+    @apply inline-flex items-center justify-center rounded-full border border-transparent bg-halt-red px-8 py-3 text-sm font-extrabold uppercase tracking-[0.28em] text-white transition duration-200 hover:scale-[1.01] hover:bg-[#f14b58] active:scale-[0.99];
+  }
+}
+
+.CircularProgressbar .CircularProgressbar-trail {
+  stroke: #202020;
+}
+
+.CircularProgressbar .CircularProgressbar-path {
+  stroke: #e63946;
+  stroke-linecap: round;
+}
+
+.CircularProgressbar .CircularProgressbar-text {
+  fill: #ffffff;
+}
